@@ -1,0 +1,176 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300&display=swap');
+
+body {
+    min-height: 100vh;
+    position: relative;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Red Hat Text', sans-serif;    
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-image: url(../img/pattern-hills.svg), url(../img/bg-stars.svg), linear-gradient(0deg, hsl(249deg 18% 14%) 0%, hsl(257deg 19% 14%) 19%, hsl(266deg 19% 14%) 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, center;
+    background-size: 100% 8rem, cover, cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.title {
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 5rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.box-container {
+    margin: 0 .7rem 0 0;
+    position: relative;
+}
+
+.conteudo {
+	position: relative;
+	overflow-x: hidden;
+	border-radius: 0.714em; 
+	box-shadow: 0 9px 6px 0 hsl(235deg 18% 12%);
+}
+
+.box-top {
+	width: 8.714em;
+	height: 3.2rem;
+	background-color: hsl(240deg 21% 22%);
+	border-radius: 10px 10px 0 0;
+}
+
+.position-text {
+    position: relative;
+}
+
+.box-bottom {
+	height: 3.214em;
+	width: 8.714em;
+	background-color: hsl(236deg 21% 26%);
+	border-radius: 10px 10px 0 0;
+	overflow-y: hidden;
+}
+
+
+.box-bottom::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 20px; 
+	height: 15px; 
+	border-radius: 50px; 
+	background-color: hsl(234, 17%, 12%);
+}
+
+.box-bottom::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(50%, -50%);
+	width: 20px;
+	height: 15px;
+	border-radius: 3.571em;
+	background-color: hsl(234, 17%, 12%);
+}
+
+.tempo-top {
+	opacity: 0.75;
+	position: absolute;
+	transform: translate(-50%, 8%);
+	font-size: 4em;
+	color: rgb(251, 96, 135);
+}
+
+.title-02 {
+	color: #8385a9;
+	letter-spacing: .3rem;
+	margin: 1rem 0;
+	text-align: center;
+    text-transform: uppercase;
+}
+
+.social-links {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    text-align: center;
+    gap: 1.6rem;
+}
+
+.countdown {
+    animation-name: animacao;
+    animation-duration: 3s;
+}
+
+@keyframes animacao {
+    from {
+        margin-top: 20rem;
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.title {
+    animation-name: titulo;
+    animation-duration: 3s;
+}
+
+@keyframes titulo {
+    from {
+        margin-right: 25rem;
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.social-links {
+    animation-name: social;
+    animation-duration: 3s;
+    animation-timing-function: 0;
+}
+
+@keyframes social {
+    from {
+        margin-left: 25rem;
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .container {
+        background-size: 100% 8rem, cover, cover;
+    }
+}
